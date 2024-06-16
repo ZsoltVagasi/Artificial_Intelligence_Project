@@ -19,4 +19,4 @@ def speech_to_text_from_mic(language='en-US'):
             print("Sorry could not recognize your voice")
             return None
 
-# print(speech_to_text_from_mic('hu-HU'))  # For Hungarian
+print(speech_to_text_from_mic('hu-HU'))  # For Hungarian
