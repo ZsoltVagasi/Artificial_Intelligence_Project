@@ -1,6 +1,2 @@
-cat
-mouse
-house
-elefã¡nt
-banã¡n
-sun
+macska
+kutya

@@ -7,7 +7,7 @@ def load_data(file_path):
     with open(file_path, 'r') as file:
         return file.readlines()
 
-def preprocess_data(sentences, num_words=10000, oov_token="<OOV>"):
+def preprocess_data(sentences, num_words=1000, oov_token="<OOV>"):
     tokenizer = Tokenizer(num_words=num_words, oov_token=oov_token)
     tokenizer.fit_on_texts(sentences)
     sequences = tokenizer.texts_to_sequences(sentences)
@@ -42,23 +42,3 @@ def log_recognized_words(recognized_words, output_file):
         for word in recognized_words:
             if word != '<OOV>':
                 file.write(f"{word}\n")
-
-# Main script
-if __name__ == "__main__":
-    # Load and preprocess training data
-    train_sentences = load_data('train.txt')
-    tokenizer, padded_sequences = preprocess_data(train_sentences)
-    labels = np.array([1] * len(train_sentences))  # Adjust according to your data
-
-    # Build and train the model
-    model = build_model(vocab_size=1000, input_length=padded_sequences.shape[1])
-    train_model(model, padded_sequences, labels)
-
-    # Load new sentences for recognition
-    new_sentences = load_data('lorem_ipsum.txt')
-
-    # Recognize words and log them
-    recognized_words = recognize_words(model, tokenizer, new_sentences, maxlen=padded_sequences.shape[1])
-    log_recognized_words(recognized_words, 'output.txt')
-
-    print("Recognition and logging complete.")
