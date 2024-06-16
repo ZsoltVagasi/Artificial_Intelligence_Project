@@ -1,12 +1,2 @@
-<OOV>
-<OOV>
-<OOV>
-<OOV>
-<OOV>
-apple
-is
-<OOV>
-<OOV>
-<OOV>
-was
-was
+macska
+kutya

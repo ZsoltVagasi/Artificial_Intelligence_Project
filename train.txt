@@ -1,4 +1,26 @@
-apple
-pear
-is
-was
+apple alma
+banana banán
+cat macska
+dog kutya
+elephant elefánt
+flower virág
+grape szőlő
+house ház
+ice cream fagylalt
+jacket dzseki
+kitchen konyha
+lemon citrom
+mouse egér
+notebook notesz
+orange narancs
+pencil ceruza
+queen királynő
+rabbit nyúl
+sun nap
+table asztal
+umbrella esernyő
+violin hegedű
+water víz
+xylophone xilofon
+yellow sárga
+zebra zebra
